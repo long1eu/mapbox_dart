@@ -17,10 +17,10 @@ abstract class StaticMarkerAnnotation implements Built<StaticMarkerAnnotation, S
   factory StaticMarkerAnnotation([void updates(StaticMarkerAnnotationBuilder b)]) = _$StaticMarkerAnnotation;
 
   factory StaticMarkerAnnotation.fromValues({
-    MarkerScale scale,
+    @required MarkerScale scale,
     String label,
     String color,
-    Point lnglat,
+    @required Point lnglat,
     String iconUrl,
   }) {
     assert(scale != null);
