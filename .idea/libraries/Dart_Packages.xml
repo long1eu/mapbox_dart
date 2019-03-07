@@ -119,13 +119,6 @@
             </list>
           </value>
         </entry>
-        <entry key="chopper_generator">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/chopper_generator-2.0.0/lib" />
-            </list>
-          </value>
-        </entry>
         <entry key="code_builder">
           <value>
             <list>
@@ -164,8 +157,8 @@
         <entry key="dart_style">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/dart_style-1.2.0/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/dart_style-1.2.3/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/dart_style-1.2.0/lib" />
             </list>
           </value>
         </entry>
@@ -266,6 +259,20 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/logging-0.11.3+2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="mapbox_core">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/git/mapbox_dart-1720bc6ee5ef542fd49bed191f7abfb2eb955946/mapbox_core/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="mapbox_geojson">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/git/mapbox_dart-1720bc6ee5ef542fd49bed191f7abfb2eb955946/mapbox_geojson/lib" />
             </list>
           </value>
         </entry>
@@ -531,6 +538,8 @@
       </option>
     </properties>
     <CLASSES>
+      <root url="file://$USER_HOME$/.pub-cache/git/mapbox_dart-1720bc6ee5ef542fd49bed191f7abfb2eb955946/mapbox_core/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/git/mapbox_dart-1720bc6ee5ef542fd49bed191f7abfb2eb955946/mapbox_geojson/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/analyzer-0.33.6+1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/analyzer-0.34.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/analyzer_plugin-0.0.1-alpha.5/lib" />
@@ -552,7 +561,6 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/built_value_generator-6.3.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/charcode-1.1.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/chopper-2.1.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/chopper_generator-2.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/code_builder-3.2.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/collection-1.14.11/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/convert-2.1.1/lib" />
