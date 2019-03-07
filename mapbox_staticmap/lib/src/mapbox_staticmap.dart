@@ -248,13 +248,15 @@ abstract class MapboxStaticMap implements Built<MapboxStaticMap, MapboxStaticMap
     uri = uri.replace(pathSegments: uri.pathSegments + [cameraAuto ? _cameraAuto : _generateLocationPathSegment]);
 
     if (beforeLayer != null) {
-      uri = uri.replace(queryParameters: uri.queryParameters..addAll({_beforeLayer: beforeLayer}));
+      uri = uri.replace(
+          queryParameters: Map<String, String>.from(uri.queryParameters)..addAll({_beforeLayer: beforeLayer}));
     }
     if (!attribution) {
-      uri = uri.replace(queryParameters: uri.queryParameters..addAll({'attribution': 'false'}));
+      uri =
+          uri.replace(queryParameters: Map<String, String>.from(uri.queryParameters)..addAll({'attribution': 'false'}));
     }
     if (!logo) {
-      uri = uri.replace(queryParameters: uri.queryParameters..addAll({'logo': 'false'}));
+      uri = uri.replace(queryParameters: Map<String, String>.from(uri.queryParameters)..addAll({'logo': 'false'}));
     }
 
     // Has to be last segment in URL
