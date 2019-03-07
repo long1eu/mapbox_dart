@@ -13,7 +13,27 @@ part 'static_marker_annotation.g.dart';
 /// or within your static image. The marker can either use the default marker (though you can change
 /// it's color and size) or you have the option to also pass in a custom marker icon using it's url.
 abstract class StaticMarkerAnnotation implements Built<StaticMarkerAnnotation, StaticMarkerAnnotationBuilder> {
+  @protected
   factory StaticMarkerAnnotation([void updates(StaticMarkerAnnotationBuilder b)]) = _$StaticMarkerAnnotation;
+
+  factory StaticMarkerAnnotation.fromValues({
+    MarkerScale scale,
+    String label,
+    String color,
+    Point lnglat,
+    String iconUrl,
+  }) {
+    assert(scale != null);
+    assert(lnglat != null);
+    return StaticMarkerAnnotation((b) {
+      b
+        ..scale = scale
+        ..label = label
+        ..color = color
+        ..lnglat = lnglat.toBuilder()
+        ..iconUrl = iconUrl;
+    });
+  }
 
   factory StaticMarkerAnnotation.fromJson(Map<String, dynamic> json) => serializers.deserializeWith(serializer, json);
 
