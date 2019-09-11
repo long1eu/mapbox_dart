@@ -1,16 +1,16 @@
-/// GeoJson utils class contains method that can be used throughout geojson package.
-class GeoJsonUtils {
-  static double ROUND_PRECISION = 10000000.0;
-  static int MAX_DOUBLE_TO_ROUND = 2 ^ 53 ~/ ROUND_PRECISION;
+// File created by
+// Lung Razvan <long1eu>
+// on 08/11/2018
 
+part of mapbox_geojson;
+
+/// GeoJson utils class contains method that can be used throughout geojson
+/// package.
+class GeoJsonUtils {
   /// Trims a double value to have only 7 digits after period.
-  ///
-  /// @param value to be trimed
-  /// @return trimmed value
-  static double trim(double value) {
-    if (value > MAX_DOUBLE_TO_ROUND || value < -MAX_DOUBLE_TO_ROUND) {
-      return value;
-    }
-    return (value * ROUND_PRECISION).round() / ROUND_PRECISION;
+  static double trim(double value) => (value * 10e6).round() / 10e6;
+
+  static List<double> normalize(List<dynamic> it) {
+    return List<num>.from(it).map((num it) => trim(it.toDouble())).toList();
   }
 }

@@ -62,7 +62,6 @@ abstract class StaticMarkerAnnotation implements Built<StaticMarkerAnnotation, S
   @nullable
   String get iconUrl;
 
-  @protected
   String get url {
     String url;
     if (iconUrl != null) {

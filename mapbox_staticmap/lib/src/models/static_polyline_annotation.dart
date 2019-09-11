@@ -4,7 +4,6 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:mapbox_geojson/mapbox_geojson.dart' hide serializers;
 import 'package:mapbox_staticmap/src/models/serializers.dart';
-import 'package:meta/meta.dart';
 
 part 'static_polyline_annotation.g.dart';
 
@@ -43,7 +42,6 @@ abstract class StaticPolylineAnnotation implements Built<StaticPolylineAnnotatio
   /// [polyline] a string containing the paths geometry information
   String get polyline;
 
-  @protected
   String get url {
     StringBuffer sb = StringBuffer();
 

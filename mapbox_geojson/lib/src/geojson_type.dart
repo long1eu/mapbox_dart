@@ -1,27 +1,39 @@
-library geojson_type;
+// File created by
+// Lung Razvan <long1eu>
+// on 08/11/2018
 
-import 'package:built_collection/built_collection.dart';
-import 'package:built_value/built_value.dart';
-import 'package:built_value/serializer.dart';
+part of mapbox_geojson;
 
-part 'geojson_type.g.dart';
+class GeoJsonType {
+  const GeoJsonType._(this.name);
 
-class GeoJsonType extends EnumClass {
-  const GeoJsonType._(String name) : super(name);
+  final String name;
 
-  static const GeoJsonType GeometryCollection = _$GeometryCollection;
-  static const GeoJsonType Point = _$Point;
-  static const GeoJsonType MultiPoint = _$MultiPoint;
-  static const GeoJsonType LineString = _$LineString;
-  static const GeoJsonType MultiLineString = _$MultiLineString;
-  static const GeoJsonType Polygon = _$Polygon;
-  static const GeoJsonType MultiPolygon = _$MultiPolygon;
-  static const GeoJsonType Feature = _$Feature;
-  static const GeoJsonType FeatureCollection = _$FeatureCollection;
+  static const GeoJsonType geometryCollection =
+      GeoJsonType._('GeometryCollection');
+  static const GeoJsonType point = GeoJsonType._('Point');
+  static const GeoJsonType multiPoint = GeoJsonType._('MultiPoint');
+  static const GeoJsonType lineString = GeoJsonType._('LineString');
+  static const GeoJsonType multiLineString = GeoJsonType._('MultiLineString');
+  static const GeoJsonType polygon = GeoJsonType._('Polygon');
+  static const GeoJsonType multiPolygon = GeoJsonType._('MultiPolygon');
+  static const GeoJsonType feature = GeoJsonType._('Feature');
+  static const GeoJsonType featureCollection =
+      GeoJsonType._('FeatureCollection');
 
-  static BuiltSet<GeoJsonType> get values => _$GeoJsonTypeValues;
+  static const List<GeoJsonType> values = <GeoJsonType>[
+    geometryCollection,
+    point,
+    multiPoint,
+    lineString,
+    multiLineString,
+    polygon,
+    multiPolygon,
+    feature,
+    featureCollection,
+  ];
 
-  static GeoJsonType valueOf(String name) => _$GeoJsonTypeValueOf(name);
-
-  static Serializer<GeoJsonType> get serializer => _$geoJsonTypeSerializer;
+  static GeoJsonType valueOf(String name) {
+    return values.firstWhere((GeoJsonType it) => it.name == name);
+  }
 }

@@ -7,5 +7,5 @@ class Preconditions {
     }
   }
 
-  Preconditions._() {}
+  Preconditions._();
 }

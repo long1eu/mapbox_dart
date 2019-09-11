@@ -1,4 +1,4 @@
-import 'package:mapbox_geojson/src/point.dart';
+import 'package:mapbox_geojson/mapbox_geojson.dart';
 
 /// ShifterManager allows the movement of all Point objects according to a custom algorithm.
 /// Once set, it will be applied to all Point objects created through this method.
@@ -17,6 +17,7 @@ abstract class CoordinateShifter {
 
   /// Unshifted coordinate values according to its algorithm.
   ///
-  /// Returns unshifted longitude, shifted latitude, and altitude (if present) in the form of List of double
+  /// Returns unshifted longitude, shifted latitude, and altitude (if present)
+  /// in the form of List of double
   List<double> unshiftPoint(Point shiftedPoint);
 }

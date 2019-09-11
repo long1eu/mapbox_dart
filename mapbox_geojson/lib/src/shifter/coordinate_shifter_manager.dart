@@ -1,6 +1,7 @@
-import 'package:mapbox_geojson/src/point.dart';
+import 'package:mapbox_geojson/mapbox_geojson.dart';
 import 'package:mapbox_geojson/src/shifter/coordinate_shifter.dart';
 
+// ignore: avoid_classes_with_only_static_members
 /// CoordinateShifterManager keeps track of currently set CoordinateShifter.
 class CoordinateShifterManager {
   static CoordinateShifter coordinateShifter = _defaultShifter;
@@ -12,11 +13,12 @@ class CoordinateShifterManager {
 
   /// Sets CoordinateShifterManager.
   static void setCoordinateShifter(CoordinateShifter coordinateShifter) {
-    CoordinateShifterManager.coordinateShifter = coordinateShifter == null ? _defaultShifter : coordinateShifter;
+    CoordinateShifterManager.coordinateShifter =
+        coordinateShifter ?? _defaultShifter;
   }
 }
 
-CoordinateShifter _defaultShifter = _DefaultCoordinateShifter();
+CoordinateShifter _defaultShifter = const _DefaultCoordinateShifter();
 
 class _DefaultCoordinateShifter extends CoordinateShifter {
   const _DefaultCoordinateShifter();
@@ -26,9 +28,12 @@ class _DefaultCoordinateShifter extends CoordinateShifter {
 
   @override
   List<double> shiftLonLatAlt(double lon, double lat, double altitude) {
-    return altitude.isNaN ? <double>[lon, lat] : <double>[lon, lat, altitude];
+    return altitude == null || altitude.isNaN
+        ? <double>[lon, lat]
+        : <double>[lon, lat, altitude];
   }
 
   @override
-  List<double> unshiftPoint(Point shiftedPoint) => shiftedPoint.coordinates.toList();
+  List<double> unshiftPoint(Point shiftedPoint) =>
+      shiftedPoint.coordinates.toList();
 }
