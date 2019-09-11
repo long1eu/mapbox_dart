@@ -89,7 +89,6 @@ class Point implements CoordinateContainer<List<double>> {
     return Point._(coordinates, bbox);
   }
 
-  @visibleForTesting
   factory Point.fromCoordinates(List<double> coordinates) {
     assert(coordinates != null && coordinates.length >= 2);
     coordinates = GeoJsonUtils.normalize(coordinates);

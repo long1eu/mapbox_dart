@@ -83,7 +83,6 @@ class LineString implements CoordinateContainer<List<Point>> {
     return LineString._(points, bbox);
   }
 
-  @visibleForTesting
   factory LineString.fromCoordinates(List<List<double>> coordinates) {
     assert(coordinates != null);
 

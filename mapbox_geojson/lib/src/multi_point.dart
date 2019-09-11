@@ -64,7 +64,6 @@ class MultiPoint implements CoordinateContainer<List<Point>> {
     return MultiPoint._(points, bbox);
   }
 
-  @visibleForTesting
   factory MultiPoint.fromCoordinates(List<List<double>> coordinates) {
     assert(coordinates != null);
 

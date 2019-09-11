@@ -107,7 +107,6 @@ class Polygon implements CoordinateContainer<List<List<Point>>> {
     }
   }
 
-  @visibleForTesting
   factory Polygon.fromCoordinates(List<List<List<double>>> coordinates) {
     assert(coordinates != null);
 

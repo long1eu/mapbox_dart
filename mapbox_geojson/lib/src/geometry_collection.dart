@@ -78,7 +78,7 @@ class GeometryCollection implements Geometry {
 
   factory GeometryCollection.fromGeometries(List<Geometry> geometries,
       [BoundingBox bbox]) {
-    assert(geometries != null && geometries.isNotEmpty);
+    assert(geometries != null);
 
     return GeometryCollection._(geometries, bbox);
   }

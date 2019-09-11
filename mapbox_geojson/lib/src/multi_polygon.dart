@@ -113,7 +113,6 @@ class MultiPolygon implements CoordinateContainer<List<List<List<Point>>>> {
     return MultiPolygon._(points, bbox);
   }
 
-  @visibleForTesting
   factory MultiPolygon.fromCoordinates(
       List<List<List<List<double>>>> coordinates) {
     assert(coordinates != null);
